@@ -57,7 +57,7 @@ public class MyTester {
 	@Test
 	public void testNfactorial2() {
 		MyCalculator calc = new MyCalculator();
-		assertEquals("0! = 1", 0, calc.nfactorial(0), 0);
+		assertEquals("0! = 1", 1, calc.nfactorial(0), 0);
 	}
 	
 	@Test
