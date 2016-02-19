@@ -68,14 +68,23 @@ public class MyTester {
 	
 	@Test
 	public void testBinarySearch1() {
-		//fail("Not yet implemented");
+		// Must be able to find all 5 values
 		MyCalculator calc = new MyCalculator();
 		int testCase[] = new int[5];
-		for(int i = 0 ; i < 5 ; i++) testCase[i] = i+1;
+		for(int i = 0 ; i < 5 ; i++) testCase[i] = i;
+		for(int i = 0 ; i < 5 ; i++)
+			assertEquals("Find all", i, calc.binarySearch(testCase, i), 0);
 		
-		int answer = calc.binarySearch(testCase, 3);
+	}
+	
+	@Test
+	public void testBinarySearch2() {
+//		Must be able to return -1 if value does not exist in the array
+		MyCalculator calc = new MyCalculator();
+		int[] testCase = {0, 1, 2};
 		
-		System.out.println("Answer: " + answer);
+		assertEquals("Value is not in array", -1, calc.binarySearch(testCase, 5), 0);
+		
 		
 	}
 
